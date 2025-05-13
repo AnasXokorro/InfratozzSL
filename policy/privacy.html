@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidad de Infratozz SL">
+    <link rel="shortcut icon" href="../img/Logo.ico" type="image/x-icon">
+    <title>Política de Privacidad - Infratozz SL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Todos los estilos de la página principal */
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #003366;
+            --accent-color: #00a1e0;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --text-light: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            position: relative;
+            min-height: 100vh;
+            padding-bottom: 200px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark-color), var(--secondary-color));
+            color: var(--text-light);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px;
+            transition: transform 0.3s;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--accent-color), #fff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 5px rgba(0, 161, 224, 0.3);
+        }
+
+        .logo-slogan {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            margin-top: -5px;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .legal-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .legal-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .legal-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .legal-content h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: var(--secondary-color);
+        }
+
+        .legal-content p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .legal-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .legal-content ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--dark-color), var(--secondary-color));
+            color: var(--text-light);
+            padding: 60px 20px 30px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-column p, .footer-column a {
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            transition: color 0.3s;
+            display: block;
+        }
+
+        .footer-column a {
+            text-decoration: none;
+        }
+
+        .footer-column a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .legal-content {
+                padding: 30px 20px;
+            }
+
+            .legal-content h1 {
+                font-size: 2rem;
+            }
+
+            .legal-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .legal-content {
+                padding: 20px 15px;
+            }
+
+            .legal-content h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="../img/Infratozz-Logo.png" alt="Infratozz Logo" class="logo-img">
+                <div>
+                    <div class="logo-text">INFRATOZZ SL</div>
+                    <div class="logo-slogan">Expertos en Infraestructura de CPD</div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../signup.html">Contacto</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="legal-container">
+        <div class="legal-content">
+            <h1>Política de Privacidad</h1>
+            
+            <p>En Infratozz SL, nos comprometemos a proteger y respetar su privacidad. Esta política explica cómo recopilamos, usamos y protegemos su información personal.</p>
+            
+            <h2>1. Información que recopilamos</h2>
+            <p>Podemos recopilar y procesar los siguientes datos sobre usted:</p>
+            <ul>
+                <li>Información que nos proporciona al completar formularios en nuestro sitio web</li>
+                <li>Detalles de transacciones que realice a través de nuestro sitio</li>
+                <li>Información sobre su visita, incluyendo datos de tráfico, ubicación y otros datos de comunicación</li>
+                <li>Información de encuestas que podamos realizar para fines de investigación</li>
+            </ul>
+            
+            <h2>2. Uso de su información</h2>
+            <p>Utilizamos la información que recopilamos para:</p>
+            <ul>
+                <li>Proveer nuestros servicios y cumplir con nuestras obligaciones contractuales</li>
+                <li>Mejorar nuestro sitio web y servicios</li>
+                <li>Enviar comunicaciones de marketing, si ha dado su consentimiento</li>
+                <li>Cumplir con requisitos legales y regulatorios</li>
+            </ul>
+            
+            <h2>3. Divulgación de su información</h2>
+            <p>No compartiremos su información personal con terceros excepto:</p>
+            <ul>
+                <li>Cuando sea necesario para proveer nuestros servicios</li>
+                <li>Cuando estemos obligados por ley o regulaciones</li>
+                <li>Para proteger los derechos, propiedad o seguridad de Infratozz SL, nuestros clientes u otros</li>
+            </ul>
+            
+            <h2>4. Sus derechos</h2>
+            <p>Usted tiene derecho a:</p>
+            <ul>
+                <li>Solicitar acceso a sus datos personales</li>
+                <li>Solicitar la corrección de datos incorrectos</li>
+                <li>Solicitar la eliminación de sus datos personales</li>
+                <li>Oponerse al procesamiento de sus datos personales</li>
+                <li>Solicitar la restricción del procesamiento de sus datos</li>
+                <li>Solicitar la transferencia de sus datos a otra organización</li>
+            </ul>
+            
+            <h2>5. Cambios a esta política</h2>
+            <p>Podemos actualizar esta política ocasionalmente. Cualquier cambio será publicado en esta página.</p>
+            
+            <h2>6. Contacto</h2>
+            <p>Para cualquier pregunta sobre esta política de privacidad, por favor contáctenos en:</p>
+            <p>Email: privacidad@infratozz.com<br>
+            Teléfono: +34 910 123 456<br>
+            Dirección: Calle Tecnología 42, 28020 Madrid</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Infratozz SL</h3>
+                <p>Especialistas en diseño, implementación y mantenimiento de infraestructuras para Centros de Procesamiento de Datos.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Tecnología 42, 28020 Madrid</p>
+                <p><i class="fas fa-phone"></i> +34 910 123 456</p>
+                <p><i class="fas fa-envelope"></i> info@infratozz.com</p>
+                <p><i class="fas fa-clock"></i> L-V: 9:00 - 18:00</p>
+            </div>
+            <div class="footer-column">
+                <h3>Enlaces rápidos</h3>
+                <a href="../index.html">Inicio</a>
+                <a href="../index.html#services">Servicios</a>
+                <a href="../index.html#about">Sobre nosotros</a>
+                <a href="../signup.html">Contacto</a>
+                <a href="../login.html">Área de clientes</a>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <a href="privacy.html">Política de privacidad</a>
+                <a href="cookies.html">Política de cookies</a>
+                <a href="terms.html">Términos y condiciones</a>
+                <a href="legal.html">Aviso legal</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Infratozz SL. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
